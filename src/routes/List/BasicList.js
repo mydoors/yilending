@@ -65,6 +65,10 @@ export default class BasicList extends PureComponent {
           <p>{owner}</p>
         </div>
         <div className={styles.listContentItem}>
+          <span>loaner</span>
+          <p>{owner}</p>
+        </div>
+        <div className={styles.listContentItem}>
           <span>开始时间</span>
           <p>{moment(createdAt).format('YYYY-MM-DD hh:mm')}</p>
         </div>
@@ -136,6 +140,7 @@ export default class BasicList extends PureComponent {
                     title={<a href={item.href}>{item.title}</a>}
                     description={item.subDescription}
                   />
+
                   <ListContent data={item} />
                 </List.Item>
               )}

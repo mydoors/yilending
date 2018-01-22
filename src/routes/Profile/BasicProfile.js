@@ -130,6 +130,16 @@ export default class BasicProfile extends Component {
         <Card bordered={false}>
           <DescriptionList size="large" title="退款申请" style={{ marginBottom: 32 }}>
             <Description term="取货单号">1000000000</Description>
+            <Description term="取货单号">1000000000</Description>
+            <Description term="状态">已取货</Description>
+            <Description term="销售单号">1234123421</Description>
+            <Description term="子订单">3214321432</Description>
+          </DescriptionList>
+
+          <Divider style={{ marginBottom: 32 }} />
+          <DescriptionList size="large" title="退款申请" style={{ marginBottom: 32 }}>
+            <Description term="取货单号">1000000000</Description>
+            <Description term="取货单号">1000000000</Description>
             <Description term="状态">已取货</Description>
             <Description term="销售单号">1234123421</Description>
             <Description term="子订单">3214321432</Description>
@@ -152,6 +162,15 @@ export default class BasicProfile extends Component {
             columns={goodsColumns}
             rowKey="id"
           />
+          <Table
+            style={{ marginBottom: 24 }}
+            pagination={false}
+            loading={loading}
+            dataSource={goodsData}
+            columns={goodsColumns}
+            rowKey="id"
+          />
+          <div className={styles.title}>退货进度</div>
           <div className={styles.title}>退货进度</div>
           <Table
             style={{ marginBottom: 16 }}

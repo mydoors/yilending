@@ -179,7 +179,7 @@ export default class AdvancedProfile extends Component {
       });
     } else if (stepDirection !== 'horizontal' && w > 576) {
       this.setState({
-        stepDirection: 'horizontal',
+        stepDirection: 'vertical',
       });
     }
   }
@@ -225,6 +225,21 @@ export default class AdvancedProfile extends Component {
             <Step title="财务复核" />
             <Step title="完成" />
           </Steps>
+        </Card>
+        <Card title="流程进度" style={{ marginBottom: 24 }} bordered={false}>
+          <Steps direction={"vertical"} progressDot={customDot} current={2}>
+            <Step title="创建项目" description={desc1} />
+            <Step title="部门初审" description={desc2} />
+            <Step title="财务复核" />
+            <Step title="完成" />
+          </Steps>
+          <DescriptionList style={{ marginBottom: 124 }}>
+            <Description term="用户姓名">付小小</Description>
+            <Description term="会员卡号">32943898021309809423</Description>
+            <Description term="身份证">3321944288191034921</Description>
+            <Description term="联系方式">18112345678</Description>
+            <Description term="联系地址">曲丽丽 18100000000 浙江省杭州市西湖区黄姑山路工专路交叉路口</Description>
+          </DescriptionList>
         </Card>
         <Card title="用户信息" style={{ marginBottom: 24 }} bordered={false}>
           <DescriptionList style={{ marginBottom: 24 }}>

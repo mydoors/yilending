@@ -14,7 +14,7 @@ import NotFound from '../routes/Exception/404';
 import { getRoutes } from '../utils/utils';
 import Authorized from '../utils/Authorized';
 import { getMenuData } from '../common/menu';
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo.png';
 
 const { Content } = Layout;
 const { AuthorizedRoute } = Authorized;
@@ -216,7 +216,7 @@ class BasicLayout extends React.PureComponent {
               }]}
               copyright={
                 <div>
-                  Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+                  Copyright <Icon type="copyright" /> 2018 易贷技术部出品
                 </div>
               }
             />

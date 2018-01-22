@@ -1,7 +1,7 @@
 const basicGoods = [
   {
     id: '1234561',
-    name: '矿泉水 550ml',
+    name: '矿泉水等等2 550ml',
     barcode: '12421432143214321',
     price: '2.00',
     num: '1',

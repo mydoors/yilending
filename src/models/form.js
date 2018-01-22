@@ -16,11 +16,18 @@ export default {
 
   effects: {
     *submitRegularForm({ payload }, { call }) {
-      yield call(fakeSubmitForm, payload);
-      message.success('提交成功');
+      let response=yield call(fakeSubmitForm, payload);
+
+      message.success(response.message);
+    },
+    *submitLoanApplyForm({ payload }, { call }) {
+      let response=yield call(fakeSubmitForm, payload);
+
+      message.success(response.message+"loan");
     },
     *submitStepForm({ payload }, { call, put }) {
       yield call(fakeSubmitForm, payload);
+
       yield put({
         type: 'saveStepFormData',
         payload,

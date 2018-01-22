@@ -21,7 +21,7 @@ export default class BasicForms extends PureComponent {
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         this.props.dispatch({
-          type: 'form/submitRegularForm',
+          type: 'form/submitLoanApplyForm',
           payload: values,
         });
       }
@@ -51,7 +51,7 @@ export default class BasicForms extends PureComponent {
     };
 
     return (
-      <PageHeaderLayout title="借款申请" content="表单页用于向用户收集或验证信息，基础表单常见于数据项较少的表单场景。">
+      <PageHeaderLayout title="借款申请" content="该表单用于填写借款条件，并给公示给有意愿贷款者">
         <Card bordered={false}>
           <Form
             onSubmit={this.handleSubmit}
@@ -60,14 +60,27 @@ export default class BasicForms extends PureComponent {
           >
             <FormItem
               {...formItemLayout}
-              label="标题"
+              label={<span>金额</span>}
             >
-              {getFieldDecorator('title', {
+              {getFieldDecorator('amount', {
                 rules: [{
-                  required: true, message: '请输入标题',
+                required: true, message: '请输入借款总金额',
+              }]})(
+
+                <InputNumber placeholder="请输入" min={0} max={10000} />
+              )}
+              <span>万</span>
+            </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label="金额(万)"
+            >
+              {getFieldDecorator('Amount', {
+                rules: [{
+                  required: true, message: '请输入借款总金额',
                 }],
               })(
-                <Input placeholder="给目标起个名字" />
+                <Input placeholder="100" />
               )}
             </FormItem>
             <FormItem

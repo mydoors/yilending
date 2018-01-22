@@ -22,8 +22,7 @@ const proxy = {
         exp: 2,
       },
     },
-    $body: {
-      name: 'Serati Ma',
+    $body: {name: 'Jim Zheng',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
       userid: '00000001',
       notifyCount: 12,
@@ -60,6 +59,10 @@ const proxy = {
   },
   'POST /api/forms': (req, res) => {
     res.send({ message: 'Ok' });
+  },
+  'POST /api/loanapply': (req, res) => {
+    console.log("zhengok222")
+    res.send({ message: 'Okzhengjiethisi is new message ' });
   },
   'GET /api/tags': mockjs.mock({
     'list|100': [{ name: '@city', 'value|1-100': 150, 'type|0-2': 1 }]
@@ -119,7 +122,7 @@ const proxy = {
       "timestamp": 1513932555104,
       "status": 403,
       "error": "Unauthorized",
-      "message": "Unauthorized",
+      "message": "未经授权！",
       "path": "/base/category/list"
     });
   },

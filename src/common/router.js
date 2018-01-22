@@ -87,6 +87,9 @@ export const getRouterData = (app) => {
     '/form/basic-form': {
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/BasicForm')),
     },
+    '/Loan/LoanApplyForm': {
+      component: dynamicWrapper(app, ['form'], () => import('../routes/Loan/LoanApplyForm')),
+    },
     '/form/step-form': {
       component: dynamicWrapper(app, ['form'], () => import('../routes/Forms/StepForm')),
     },
